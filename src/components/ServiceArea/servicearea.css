@@ -153,12 +153,17 @@
         font-size: 18px;
     }
     .card-container {
-        height: 12.4rem;
-        padding: 17px;
+        height: 14rem;
+        width: 11.6rem;
+        padding: 20px;
     }    
     .service-card-text {
-        font-size: 13px;
+        font-size: 15px;
     }
+    /* .card-container {
+        height: 14rem;
+        width: 14rem;
+    } */
 }
 
 @media screen and (max-width:1000px) {
@@ -184,8 +189,8 @@
         gap: 20px;
     }
     .card-container {
-        height: 13rem;
-        width: 13rem;
+        height: 14rem;
+        width: 14rem;
     }
     .service-left-container-heading{
         margin-bottom: 30px;
@@ -207,7 +212,7 @@
 
 @media screen and (max-width: 470px){
     .service-left-container-heading {
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
     .service-area-container {
         padding: 0px 20px;

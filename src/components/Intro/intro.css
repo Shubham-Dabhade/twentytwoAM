@@ -1,0 +1,45 @@
+.Intro-Outer-Container{
+
+
+}
+.scrollmagic-pin-spacer{
+    /* padding-bottom: 0px !important; */
+}
+.Intro{
+    box-sizing: border-box;
+    height: 2010vh;
+    /* margin-bottom: 4000vh; */
+}
+.intro-image{
+    top: 0px;
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.Intro-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* overflow: hidden; */
+}
+/* compatible with tablets */
+@media screen and (max-width:768px) {
+    .Intro{
+        box-sizing: border-box;
+        height: 2500vh;
+        /* margin-bottom: 4000vh; */
+    }
+}
+
+@media screen and (max-width:500px) {
+    .Intro{
+        box-sizing: border-box;
+        height: 4500vh;
+        /* margin-bottom: 4000vh; */
+    }
+    .intro-image {
+        object-fit: contain;
+        height: 90vh;
+    }
+}
