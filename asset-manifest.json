@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/twentytwoAM/static/css/main.0baaf7ad.css",
+    "main.css": "/twentytwoAM/static/css/main.9987f74a.css",
     "main.js": "/twentytwoAM/static/js/main.886afaa3.js",
     "static/media/TTam Logo colour@3x.png": "/twentytwoAM/static/media/TTam Logo colour@3x.2c174e0d7d0082a4c8da.png",
     "static/media/block-003@3x.png": "/twentytwoAM/static/media/block-003@3x.2520b6468fdc098f482b.png",
@@ -9,11 +9,11 @@
     "static/media/block-004@3x.png": "/twentytwoAM/static/media/block-004@3x.6eb30e35687fc6425825.png",
     "index.html": "/twentytwoAM/index.html",
     "static/media/mask.svg": "/twentytwoAM/static/media/mask.e9dd8d999caa90c178bc.svg",
-    "main.0baaf7ad.css.map": "/twentytwoAM/static/css/main.0baaf7ad.css.map",
+    "main.9987f74a.css.map": "/twentytwoAM/static/css/main.9987f74a.css.map",
     "main.886afaa3.js.map": "/twentytwoAM/static/js/main.886afaa3.js.map"
   },
   "entrypoints": [
-    "static/css/main.0baaf7ad.css",
+    "static/css/main.9987f74a.css",
     "static/js/main.886afaa3.js"
   ]
 }
