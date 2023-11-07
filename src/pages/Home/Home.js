@@ -5,15 +5,17 @@ import AboutUs from '../../components/AboutUs/AboutUs';
 import ServiceArea from '../../components/ServiceArea/ServiceArea';
 import SolutionTrack from '../../components/SolutionTrack/SolutionTrack';
 import Intro from '../../components/Intro/Intro';
+import Work from '../../components/Work/Work';
 
 
 const Home = () => {
   return (
     <div className='Home'>
-        <Intro/>
+        {/* <Intro/> */}
         <AboutUs/>
         <ServiceArea/>
-        <SolutionTrack/>        
+        <SolutionTrack/> 
+        <Work/>       
     </div>
   )
 }

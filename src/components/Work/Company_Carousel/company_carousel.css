@@ -1,0 +1,18 @@
+.Company_Carousel{
+    flex:2;
+    height: 100%;
+}
+.inner-company-carousel{
+    height: 100%;
+    width: 100%;
+}
+.company-name-image-container{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: rgb(219, 219, 219);
+
+}

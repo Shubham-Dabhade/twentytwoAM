@@ -40,7 +40,7 @@ const Intro = () => {
         // <Controller>
         // <Scene duration={45000} triggerElement={".Intro"} triggerHook={0} pin pushFollowers="false" >
             <div className="Intro" ref={introContainer}>
-                <img className="intro-image" src={require(`../../images/new-frames/frame${scrolledIntro.toString().padStart(4,"0")}1.png`)} alt="" />
+                {/* <img className="intro-image" src={require(`../../images/new-frames/frame${scrolledIntro.toString().padStart(4,"0")}1.png`)} alt="" /> */}
             </div>
         // </Scene>
         // </Controller>
