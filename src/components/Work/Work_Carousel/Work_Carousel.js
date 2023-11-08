@@ -18,11 +18,6 @@ const Work_Carousel = ({
   const [workDetailsImage, setWorkDetailsImage] = useState();
   const [workDetailsName, setWorkDetailsName] = useState();
 
-
-  // if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches){
-
-  // }
-
   useEffect(() => {
     const workDetailsImages = [];
     const workDetailsNames = [];
@@ -45,33 +40,72 @@ const Work_Carousel = ({
     setWorkDetailsImage([...workDetailsImage]);
     setWorkDetailsName([...workDetailsName]);
 
-    const scrollerContent = Array.from(innerWorkContainer.current?.children);
-  
-    scrollerContent.forEach((item)=>{
-      const duplicatedItem = item.cloneNode(true);
-      
-      duplicatedItem.setAttribute('aria-hidden',true);
-      innerWorkContainer.current.appendChild(duplicatedItem);
-    })
-
-
-    console.log(workDetailsImage.length);
-    // if (trans > workDetailsImage.length-2) {
-    //   setTrans(0);
-    // }
-    // else{
-    //   setTimeout(() => {
-    //     setTrans(trans + 1);
-    //   }, 1500);
-    // }
-
-  }, [trans, amount]);
+  }, []);
 
   // console.log(workDetailsImages);
 
   return (
-    <div className="Work_Carousel">
-      <div className="inner-work-carosuel" ref={innerWorkContainer}>
+    <div
+      id="workCarousel"
+      className="carousel carousel-dark slide"
+      data-bs-ride="carousel"
+      data-bs-touch="false"
+      data-bs-pause="true"
+      // style={{ flex: 3, height: "100%" }}
+    >
+      <div
+        className="carousel-inner"
+        style={{ height: "100%", borderRadius: "30px" }}
+      >
+        <div
+          className="carousel-item active"
+          data-bs-interval="2000"
+          style={{ height: "100%", borderRadius: "30px" }}
+        >
+          <img
+            src={require("../../../images/solutions/sec02-block-02@3x.png")}
+            className="d-block w-100 h-100"
+            alt="..."
+          />
+          <div className="carousel-caption d-block d-md-block">
+            <h5>First Active slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        {workDetailsName?.map((workDetail, index) => {
+          return (
+            <div
+              className="carousel-item"
+              data-bs-interval="2000"
+              style={{ height: "100%", borderRadius: "30px" }}
+              key={workDetail}
+            >
+              <img
+                src={require("../../../images/solutions/sec02-block-02@3x.png")}
+                className="d-block w-100 h-100"
+                alt="..."
+              />
+              <div className="carousel-caption d-block d-md-block">
+                <h5>{workDetail}</h5>
+                <p>
+                  Some representative placeholder content for the first slide.
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default Work_Carousel;
+
+{
+  /* <div className="Work_Carousel">*/
+}
+{
+  /* <div className="inner-work-carosuel" ref={innerWorkContainer}>
         {workDetailsName?.map((workDetail, index) => {
           return (
             <div
@@ -87,9 +121,8 @@ const Work_Carousel = ({
             </div>
           );
         })}
-      </div>
-    </div>
-  );
-};
-
-export default Work_Carousel;
+      </div> */
+}
+{
+  /*</div>*/
+}

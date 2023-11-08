@@ -6,14 +6,35 @@
 }
 
 @media screen and (min-width:1500px) {
-  .App{
+  body{
     width: 100%;
     padding: 0rem 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .App{
+    width: 1540px;
   }
 }
+
 @media screen and (min-width:2000px) {
+  body{
+    width: 100%;
+    padding: 0rem 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
   .App{
+    width: 1840px;
+  }
+}
+/* @media screen and (min-width:2000px) {
+  body{
     width: 100%;
     padding: 0rem 20rem;
   }
-}
+} */

@@ -10,7 +10,7 @@ const Link = ({data, isActive, setSelectedIndicator}) => {
   return (
     <motion.div className="link" onMouseEnter={() => {setSelectedIndicator(href)}} custom={index} variants={slide} initial="initial" animate="enter" exit="exit">
     <motion.div variants={scale} animate={isActive ? "open" : "closed"} className="indicator"></motion.div>
-    <a href={href} className={title === "UNBORING" && "unboring_text"} style={{textDecoration:"none", color:"white"}}>{title}</a>
+    <a href={href} className={title === "UNBORING" ? "unboring_text": ""} style={{textDecoration:"none", color:"white"}}>{title}</a>
   </motion.div>
   )
 }
