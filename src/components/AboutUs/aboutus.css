@@ -3,6 +3,7 @@
   width: 100%;
   margin: 0px 0px;
   padding: 40px 0px;
+  overflow: hidden;
 }
 
 .aboutus-inside-container {
@@ -49,7 +50,7 @@
 }
 
 @media screen and (min-width:1500px){
-  .AboutUs{
+  #AboutUs{
     height: 80vh;
   }
   .aboutus-left-heading-content{
@@ -130,7 +131,7 @@
   }
 }
 @media screen and (max-width: 470px) {
-  .AboutUs{
+  #AboutUs{
     height: 80vh;
     margin: 50px 0px;
   }
@@ -146,7 +147,7 @@
 }
 
 @media screen and (max-width: 280px) {
-  .AboutUs{
+  #AboutUs{
     height: 83vh;
   }
 }

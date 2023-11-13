@@ -1,57 +1,121 @@
-.Work {
+#Work{
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   margin: 50px 0px;
   padding: 0px 80px;
 }
 .inside-work-container {
-  height: 100%;
+  height: 90%;
   width: 100%;
   display: flex;
   flex-direction: row;
   gap: 20px;
   /* overflow: hidden; */
 }
+.work-container-title{
+  font-size: 3.3vw;
+  font-weight: 600;
+  background: -webkit-linear-gradient(27deg, rgba(34,86,195,1) 0%, rgba(251,0,20,1) 45%, rgba(253,187,45,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* margin-bottom: 30px; */
+  height: 15%;
+  text-align: right;
+}
 
 @media screen and (max-width: 1500px) {
-  .Work {
+  #Work{
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     margin: 50px 0px;
     padding: 0px 80px;
   }
 }
 @media screen and (min-width: 1400px) {
-  .Work {
+  #Work{
+    width: 100%;
+    height: 90vh;
+    margin: 50px 0px;
+    padding: 0px 80px;
+  }
+  .inside-work-container {
+    height: 85%;
+  }
+  .work-container-title{
+    height: 15%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  #Work{
     width: 100%;
     height: 80vh;
     margin: 50px 0px;
     padding: 0px 80px;
   }
 }
-@media screen and (min-width: 1500px) {
-  .Work {
+@media screen and (min-width: 2000px) {
+  .work-container-title{
+    font-size: 2.8vw;
+  
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #Work{
     width: 100%;
-    height: 60vh;
+    height: 75vh;
     margin: 50px 0px;
     padding: 0px 80px;
   }
 }
+@media screen and (max-width: 1300px) {
+  #Work{
+    width: 100%;
+    height: 75vh;
+    margin: 50px 0px;
+    padding: 0px 80px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #Work{
+    width: 100%;
+    height: 75vh;
+    margin: 50px 0px;
+    padding: 0px 80px;
+  }
+}
+
 
 @media screen and (max-width: 900px) {
   .inside-work-container {
     flex-direction: column-reverse;
     gap: 10px;
   }
+    #Work{
+    width: 100%;
+    height: 95vh;
+    margin: 50px 0px;
+    padding: 0px 80px;
+  }
 }
 
 @media screen and (max-width: 850px) {
-  .Work {
+  #Work{
     padding: 0px 50px;
+    height: 100vh;
+  }
+  .work-container-title{
+    font-size: 1.8rem;
+    height: 10%;
   }
 }
 @media screen and (max-width: 470px) {
-  .Work {
+  #Work{
     padding: 0px 20px;
+  }
+  .work-container-title{
+    font-size: 1.7rem;
   }
 }

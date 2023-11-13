@@ -47,7 +47,7 @@ const Work_Carousel = ({
   return (
     <div
       id="workCarousel"
-      className="carousel carousel-dark slide"
+      className="carousel slide"
       data-bs-ride="carousel"
       data-bs-touch="false"
       data-bs-pause="true"
@@ -55,42 +55,28 @@ const Work_Carousel = ({
     >
       <div
         className="carousel-inner"
-        style={{ height: "100%", borderRadius: "30px" }}
+        style={{ height: "100%", borderRadius: "30px", overflow:'hidden' }}
       >
         <div
           className="carousel-item active"
-          data-bs-interval="2000"
+          data-bs-interval="0001"
           style={{ height: "100%", borderRadius: "30px" }}
         >
-          <img
-            src={require("../../../images/solutions/sec02-block-02@3x.png")}
-            className="d-block w-100 h-100"
-            alt="..."
-          />
-          <div className="carousel-caption d-block d-md-block">
-            <h5>First Active slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
+
         </div>
         {workDetailsName?.map((workDetail, index) => {
           return (
             <div
-              className="carousel-item"
+              className="carousel-item gradient-card"
               data-bs-interval="2000"
               style={{ height: "100%", borderRadius: "30px" }}
               key={workDetail}
             >
               <img
-                src={require("../../../images/solutions/sec02-block-02@3x.png")}
-                className="d-block w-100 h-100"
+                src={require(`../../../images/work${workDetailsImage[index]}`)}
+                className="d-block w-100 h-100 make_cover"
                 alt="..."
               />
-              <div className="carousel-caption d-block d-md-block">
-                <h5>{workDetail}</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
             </div>
           );
         })}

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./solutiontrack.css";
 import { Controller, Scene } from "react-scrollmagic";
+import { motion, useInView, useIsPresent } from "framer-motion";
 import { ScrollMagic } from "scrollmagic";
 
 const SolutionTrack = () => {
@@ -23,216 +24,551 @@ const SolutionTrack = () => {
   //     splitScroll();
   // },[]);
 
+  // variants
+  //-----left container-----
+  const solution = {
+    show: {
+      transition: {
+        delayChildren: 0.4,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const solutionCard = {
+    show: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const solutionCardComponent = {
+    show: {
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  // components animation
+  const solutionAnimationSlideRight = {
+    hidden: {
+      opacity: 0,
+      x: -200,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.6,
+      },
+    },
+    exit: {
+      opacity: 0,
+      x: -200,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.8,
+      },
+    },
+  };
+
+  const solutionAnimationSlideUp = {
+    hidden: {
+      opacity: 0,
+      y: 300,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.6,
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -100,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.8,
+      },
+    },
+  };
+
+  const solutionAnimationSlideLeft = {
+    hidden: {
+      opacity: 0,
+      x: 200,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.6,
+      },
+    },
+    exit: {
+      opacity: 0,
+      x: -200,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.8,
+      },
+    },
+  };
+
   return (
     <>
+    <div id="solutiontrackContainer" style={{width:'100%',height:'100%'}}>
       <div className="SolutionTrack">
-        <div className="inside-solution-track-container">
+        <motion.div
+          className="inside-solution-track-container"
+          variants={solution}
+          initial="hidden"
+          whileInView="show"
+        >
           <div className="solution-track-left-container">
             <div className="inside-solution-track-left-container">
               {/* card-CONTAINER1*/}
-              <div className="solutions-container">
-                <div className="solutions-heading">SOCIAL MEDIA MANAGEMENT</div>
-                <div className="solution-card-container">
+              <motion.div
+                className="solutions-container"
+                variants={solution}
+                initial="hidden"
+                whileInView="show"
+              >
+                <motion.div
+                  className="solutions-heading"
+                  variants={solutionAnimationSlideRight}
+                >
+                  SOCIAL MEDIA MANAGEMENT
+                </motion.div>
+                <motion.div
+                  className="solution-card-container"
+                  variants={solutionCard}
+                  initial="hidden"
+                  whileInView="show"
+                >
                   {/* CARD1 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-01@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">SMART</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        SMART
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Social Media Audit & Restructuring Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         A ONE-TIME OFFERING TO HELP BUILD YOUR BRAND ONLINE &
                         MAINTAIN CONSISTENCY ACROSS YOUR SOCIAL MEDIA PLATFORM
-                      </div>
-                    </div>
-                  </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
                   {/* CARD2 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-02@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">LIFT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        LIFT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         LinkedIn Intense Facelift Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         ONE-TIME OFFERING TO HELP YOU REMAIN UP-TO-DATE ON
                         LINKEDIN AND HELP ACHIEVE YOUR BUSINESS OBJECTIVES
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
               {/* card-CONTAINER2 */}
-              <div className="solutions-container">
-                <div className="solutions-heading">
+              <motion.div
+                className="solutions-container"
+                variants={solution}
+                initial="hidden"
+                whileInView="show"
+              >
+                <motion.div
+                  className="solutions-heading"
+                  variants={solutionAnimationSlideRight}
+                >
                   MARKETING & COMMUNICATIONS
-                </div>
-                <div className="solution-card-container">
+                </motion.div>
+                <motion.div
+                  className="solution-card-container"
+                  variants={solutionCard}
+                  initial="hidden"
+                  whileInView="show"
+                >
                   {/* CARD3 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-03@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">CAT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        CAT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Communications Applications Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         AN OFFERING TO HELP YOU WITH CONTENT AND CAMPAIGN
                         PLANNING
-                      </div>
-                    </div>
-                  </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
                   {/* CARD4 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-04@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">MAT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        MAT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         LinkedIn Intense Facelift Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         CREATION AND APPLICATION OF BRAND ASSETS IN MULTIMEDIA
                         FORMATS LIKE ANIMATIONS, GIFS, SOUND, ETC.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
               {/* card-CONTAINER3 */}
-              <div className="solutions-container">
-                <div className="solutions-heading">WEBSITE DESIGN</div>
-                <div className="solution-card-container">
+              <motion.div
+                className="solutions-container"
+                variants={solution}
+                initial="hidden"
+                whileInView="show"
+              >
+                <motion.div
+                  className="solutions-heading"
+                  variants={solutionAnimationSlideRight}
+                >
+                  WEBSITE DESIGN
+                </motion.div>
+                <motion.div
+                  className="solution-card-container"
+                  variants={solutionCard}
+                  initial="hidden"
+                  whileInView="show"
+                >
                   {/* CARD5 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-05@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">WANT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        WANT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Website Audit & Neating Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         A QUICK WEBSITE CLEAN-UP OFFERING USING EXISTING CONTENT
                         TO GIVE A FACELIFT TO THE CURRENT WEBSITE
-                      </div>
-                    </div>
-                  </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
                   {/* CARD6 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-06@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">WARTrack</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        WAR Track
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Website Audit & Revamp Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         A TOTAL WEBSITE REVAMP IN TERMS OF LAYOUT, DESIGN,
                         CONTENT, AND DEVELOPMENT.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="solution-card-additonal-info">
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+                <motion.div
+                  className="solution-card-additonal-info"
+                  variants={solutionAnimationSlideRight}
+                >
                   Additional services we can offer: SEO, Maintenance.
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
               {/* card-CONTAINER4 */}
-              <div className="solutions-container">
-                <div className="solutions-heading">BRAND ASSETS</div>
-                <div className="solution-card-container">
+              <motion.div
+                className="solutions-container"
+                variants={solution}
+                initial="hidden"
+                whileInView="show"
+              >
+                <motion.div
+                  className="solutions-heading"
+                  variants={solutionAnimationSlideRight}
+                >
+                  BRAND ASSETS
+                </motion.div>
+                <motion.div
+                  className="solution-card-container"
+                  variants={solutionCard}
+                  initial="hidden"
+                  whileInView="show"
+                >
                   {/* CARD7 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-07@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">DAT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        DAT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Digital Asset Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         AN OFFERING TO CREATE VARIOUS DIGITAL ASSETS LIKE BRAND/
                         CORPORATE FILMS, BANNERS FOR GOOGLE DISPLAY NETWORKS,
                         ETC.
-                      </div>
-                    </div>
-                  </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
                   {/* CARD8 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-08@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">PAT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        PAT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Print Asset Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         THIS TRACK HELPS YOU DEVELOP PRINT ASSETS LIKE PRINT
                         ADS, PAMPHLETS/LEAFLETS, BROCHURES, CATALOGUES, OFFICE
                         BRANDING, ETC.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="solution-card-additonal-info">
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+                <motion.div
+                  className="solution-card-additonal-info"
+                  variants={solutionAnimationSlideRight}
+                >
                   Bigger offerings in these tracks can be: Brand visual
                   guidelines, Brand Identity guidelines, SOP catalogues, Brand
                   manuals.
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
               {/* card-CONTAINER5 */}
-              <div className="solutions-container">
-                <div className="solutions-heading">EVENTS & ACTIVATIONS</div>
-                <div className="solution-card-container">
+              <motion.div
+                className="solutions-container"
+                variants={solution}
+                initial="hidden"
+                whileInView="show"
+              >
+                <motion.div
+                  className="solutions-heading"
+                  variants={solutionAnimationSlideRight}
+                >
+                  EVENTS & ACTIVATIONS
+                </motion.div>
+                <motion.div
+                  className="solution-card-container"
+                  variants={solutionCard}
+                  initial="hidden"
+                  whileInView="show"
+                >
                   {/* CARD9 */}
-                  <div className="solution-card-9">
+                  <motion.div
+                    className="solution-card-9"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-09@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">EAT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        EAT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Events and Activations Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         THIS TRACK HELPS YOU WITH EVENT PLANNING, EXECUTION AND
                         PRODUCTION OF EVENT RELATED COLLATERALS.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
           <Controller>
@@ -243,228 +579,469 @@ const SolutionTrack = () => {
               pin
               pushFollowers="true"
             >
-              <div className="solution-track-right-container">
+              <motion.div
+                className="solution-track-right-container"
+                variants={solutionAnimationSlideLeft}
+              >
                 OUR SOLUTION TRACKS
-              </div>
+              </motion.div>
             </Scene>
           </Controller>
-        </div>
+        </motion.div>
       </div>
       <div className="SolutionTrack-alternative">
-        <div className="inside-solution-track-container">
+        <motion.div
+          className="inside-solution-track-container"
+          variants={solution}
+          initial="hidden"
+          whileInView="show"
+        >
           <div className="solution-track-left-container">
             <div className="inside-solution-track-left-container">
               {/* card-CONTAINER1*/}
-              <div className="solutions-container">
-                <div className="solutions-heading">SOCIAL MEDIA MANAGEMENT</div>
-                <div className="solution-card-container">
+              <motion.div
+                className="solutions-container"
+                variants={solution}
+                initial="hidden"
+                whileInView="show"
+              >
+                <motion.div
+                  className="solutions-heading"
+                  variants={solutionAnimationSlideRight}
+                >
+                  SOCIAL MEDIA MANAGEMENT
+                </motion.div>
+                <motion.div
+                  className="solution-card-container"
+                  variants={solutionCard}
+                  initial="hidden"
+                  whileInView="show"
+                >
                   {/* CARD1 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-01@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">SMART</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        SMART
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Social Media Audit & Restructuring Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         A ONE-TIME OFFERING TO HELP BUILD YOUR BRAND ONLINE &
                         MAINTAIN CONSISTENCY ACROSS YOUR SOCIAL MEDIA PLATFORM
-                      </div>
-                    </div>
-                  </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
                   {/* CARD2 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-02@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">LIFT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        LIFT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         LinkedIn Intense Facelift Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         ONE-TIME OFFERING TO HELP YOU REMAIN UP-TO-DATE ON
                         LINKEDIN AND HELP ACHIEVE YOUR BUSINESS OBJECTIVES
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
               {/* card-CONTAINER2 */}
-              <div className="solutions-container">
-                <div className="solutions-heading">
+              <motion.div
+                className="solutions-container"
+                variants={solution}
+                initial="hidden"
+                whileInView="show"
+              >
+                <motion.div
+                  className="solutions-heading"
+                  variants={solutionAnimationSlideRight}
+                >
                   MARKETING & COMMUNICATIONS
-                </div>
-                <div className="solution-card-container">
+                </motion.div>
+                <motion.div
+                  className="solution-card-container"
+                  variants={solutionCard}
+                  initial="hidden"
+                  whileInView="show"
+                >
                   {/* CARD3 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-03@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">CAT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        CAT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Communications Applications Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         AN OFFERING TO HELP YOU WITH CONTENT AND CAMPAIGN
                         PLANNING
-                      </div>
-                    </div>
-                  </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
                   {/* CARD4 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-04@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">MAT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        MAT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         LinkedIn Intense Facelift Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         CREATION AND APPLICATION OF BRAND ASSETS IN MULTIMEDIA
                         FORMATS LIKE ANIMATIONS, GIFS, SOUND, ETC.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
               {/* card-CONTAINER3 */}
-              <div className="solutions-container">
-                <div className="solutions-heading">WEBSITE DESIGN</div>
-                <div className="solution-card-container">
+              <motion.div
+                className="solutions-container"
+                variants={solution}
+                initial="hidden"
+                whileInView="show"
+              >
+                <motion.div
+                  className="solutions-heading"
+                  variants={solutionAnimationSlideRight}
+                >
+                  WEBSITE DESIGN
+                </motion.div>
+                <motion.div
+                  className="solution-card-container"
+                  variants={solutionCard}
+                  initial="hidden"
+                  whileInView="show"
+                >
                   {/* CARD5 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-05@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">WANT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        WANT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Website Audit & Neating Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         A QUICK WEBSITE CLEAN-UP OFFERING USING EXISTING CONTENT
                         TO GIVE A FACELIFT TO THE CURRENT WEBSITE
-                      </div>
-                    </div>
-                  </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
                   {/* CARD6 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-06@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">WARTrack</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        WAR Track
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Website Audit & Revamp Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         A TOTAL WEBSITE REVAMP IN TERMS OF LAYOUT, DESIGN,
                         CONTENT, AND DEVELOPMENT.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="solution-card-additonal-info">
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+                <motion.div
+                  className="solution-card-additonal-info"
+                  variants={solutionAnimationSlideRight}
+                >
                   Additional services we can offer: SEO, Maintenance.
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
               {/* card-CONTAINER4 */}
-              <div className="solutions-container">
-                <div className="solutions-heading">BRAND ASSETS</div>
-                <div className="solution-card-container">
+              <motion.div
+                className="solutions-container"
+                variants={solution}
+                initial="hidden"
+                whileInView="show"
+              >
+                <motion.div
+                  className="solutions-heading"
+                  variants={solutionAnimationSlideRight}
+                >
+                  BRAND ASSETS
+                </motion.div>
+                <motion.div
+                  className="solution-card-container"
+                  variants={solutionCard}
+                  initial="hidden"
+                  whileInView="show"
+                >
                   {/* CARD7 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-07@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">DAT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        DAT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Digital Asset Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         AN OFFERING TO CREATE VARIOUS DIGITAL ASSETS LIKE BRAND/
                         CORPORATE FILMS, BANNERS FOR GOOGLE DISPLAY NETWORKS,
                         ETC.
-                      </div>
-                    </div>
-                  </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
                   {/* CARD8 */}
-                  <div className="solution-card">
+                  <motion.div
+                    className="solution-card"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-08@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">PAT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        PAT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Print Asset Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         THIS TRACK HELPS YOU DEVELOP PRINT ASSETS LIKE PRINT
                         ADS, PAMPHLETS/LEAFLETS, BROCHURES, CATALOGUES, OFFICE
                         BRANDING, ETC.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="solution-card-additonal-info">
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+                <motion.div
+                  className="solution-card-additonal-info"
+                  variants={solutionAnimationSlideRight}
+                >
                   Bigger offerings in these tracks can be: Brand visual
                   guidelines, Brand Identity guidelines, SOP catalogues, Brand
                   manuals.
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
               {/* card-CONTAINER5 */}
-              <div className="solutions-container">
-                <div className="solutions-heading">EVENTS & ACTIVATIONS</div>
-                <div className="solution-card-container">
+              <motion.div
+                className="solutions-container"
+                variants={solution}
+                initial="hidden"
+                whileInView="show"
+              >
+                <motion.div
+                  className="solutions-heading"
+                  variants={solutionAnimationSlideRight}
+                >
+                  EVENTS & ACTIVATIONS
+                </motion.div>
+                <motion.div
+                  className="solution-card-container"
+                  variants={solutionCard}
+                  initial="hidden"
+                  whileInView="show"
+                >
                   {/* CARD9 */}
-                  <div className="solution-card-9">
+                  <motion.div
+                    className="solution-card-9"
+                    variants={solutionAnimationSlideUp}
+                  >
                     <img
                       className="solution-card-mask"
                       src={require("../../images/solutions/sec02-block-09@3x.png")}
                       alt=""
                     ></img>
-                    <div className="inner-solution-card">
-                      <div className="solution-card-heading">EAT</div>
-                      <div className="solution-card-sub-heading">
+                    <motion.div
+                      className="inner-solution-card"
+                      variants={solutionCardComponent}
+                    >
+                      <motion.div
+                        className="solution-card-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
+                        EAT
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-sub-heading"
+                        variants={solutionAnimationSlideRight}
+                      >
                         Events and Activations Track
-                      </div>
-                      <div className="solution-card-text">
+                      </motion.div>
+                      <motion.div
+                        className="solution-card-text"
+                        variants={solutionAnimationSlideRight}
+                      >
                         THIS TRACK HELPS YOU WITH EVENT PLANNING, EXECUTION AND
                         PRODUCTION OF EVENT RELATED COLLATERALS.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                      </motion.div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
-          <div className="solution-track-right-container">
+          <motion.div className="solution-track-right-container">
             OUR SOLUTION TRACKS
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
+    </div>
     </>
   );
 };

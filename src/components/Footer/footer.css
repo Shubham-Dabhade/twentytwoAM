@@ -1,0 +1,190 @@
+.Footer{
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0px 80px;
+    user-select: none;
+    overflow: hidden;
+}
+
+.inside-footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top-footer-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 50px 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.158);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+}
+
+/* name - logo container */
+.ttam-name-description-container{
+    display: flex;
+    align-items: initial;
+    flex-direction: column;
+}
+
+.ttam-name-footer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: max-content;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.ttam-name-footer a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: max-content;
+    cursor: pointer;
+}
+
+.ttam-logo-container{
+    height: 60px;
+    width: 360px;
+    margin-right: 15px;
+}
+.ttam-logo{
+    height: 100%;
+    width: 100%;
+}
+
+.ttam-name{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+
+
+.ttam-links-footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+.ttam-link-container{
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.link-color{
+    display: none;
+    height: 25px;
+    width: 25px;
+}
+.link-color-yt{
+    display: none;
+    height: 30px;
+    width: 30px;
+}
+.link-color-image{
+    height: 100%;
+    width: 100%;
+}
+.link-no-color{
+    height: 25px;
+    width: 25px;
+}
+.link-no-color-yt{
+    height: 30px;
+    width: 30px;
+}
+.link-no-color-image{
+    height: 100%;
+    width: 100%;
+}
+
+
+.ttam-link-container a:hover>.link-color{
+    display: block;
+}
+.ttam-link-container a:hover>.link-no-color{
+    display: none;
+}
+
+.ttam-link-container a:hover>.link-color-yt{
+    display: block;
+}
+
+.ttam-link-container a:hover>.link-no-color-yt{
+    display: none;
+}
+
+
+/* teams container */
+.link-container-header{
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.ul-container-info-links{
+    background: none;
+    list-style: none;
+}
+
+.list-info-link{
+    color: black;
+    margin-bottom: 10px;
+}
+.list-links{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.723);
+    font-weight: 450;
+}
+
+
+/* bottom container */
+.bottom-footer-container{
+    padding: 30px 0px;
+    font-weight: 450;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: initial; 
+}
+
+
+@media screen and (max-width:1000px) {
+    .top-footer-container {
+        grid-template-columns: auto auto;
+        gap: 45px 0px;
+    }
+}
+
+@media screen and (max-width:690px) {
+    .Footer {
+        padding: 0px 15px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .top-footer-container {
+        grid-template-columns: none;
+        grid-template-rows: auto auto auto auto;
+        gap: 35px;
+    }
+    .bottom-footer-container {
+        font-size: 13px;
+    }
+}
+
+@media screen  and (max-width:450px){
+    .ttam-logo-container{
+        height: 40px;
+        width: 240px;
+    }
+}

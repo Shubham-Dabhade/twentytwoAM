@@ -15,55 +15,94 @@ const Navbar = () => {
     if (isActive) setIsActive(false);
   }, [pathname]);
 
-
   //for removing the navbar
-  useMotionValueEvent(scrollY,"change", (latest)=>{
+  useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    if (latest>previous  && latest >150){
+    if (latest > previous && latest > 150) {
       setNavHidden(true);
-    }
-    else{
+    } else {
       setNavHidden(false);
       if (isActive) setIsActive(false);
     }
-  })
+  });
 
   return (
-    // <motion.div className="Navbar-outside-component">
-    <motion.div className="Navbar"
-      variants={{
-        visible:{ y:0 },
-        hidden:{ y:'-100%'},
-      }}
-      animate={navHidden? 'hidden': 'visible' }
-      transition={{duration:0.35, ease:"easeInOut"}}
-    >
-      <div className="navbar-inside-container">
-        <div className="navbar-left-component">
-          <div className="navbar-left-inner-component">
-            <div className="logo-component">
-              <img src={require("../../images/navbar/TTam Logo colour@3x.png")} className="twentytwoAMM-logo-navbar" alt="twentytwoAM"></img>
+    <>
+      {/* <motion.div className="Navbar-outside-component"> */}
+        <motion.div
+          className="Navbar"
+          variants={{
+            visible: { y: 0 },
+            hidden: { y: "-100%" },
+          }}
+          animate={navHidden ? "hidden" : "visible"}
+          transition={{ duration: 0.35, ease: "easeInOut" }}
+        >
+          <div className="navbar-inside-container">
+            <div className="navbar-left-component">
+              <div className="navbar-left-inner-component">
+                <div className="logo-component">
+                  <img
+                    src={require("../../images/navbar/TTam Logo colour@3x.png")}
+                    className="twentytwoAMM-logo-navbar"
+                    alt="twentytwoAM"
+                  ></img>
+                </div>
+              </div>
+            </div>
+            <div className="navbar-element-right">
+              <div
+                onClick={() => {
+                  setIsActive(!isActive);
+                }}
+                className={`button ${isActive ? "button-op" : ""}`}
+              >
+                <div
+                  className={`${"burger"} ${isActive ? "burgerActive" : ""}`}
+                ></div>
+              </div>
+            </div>
+          </div>
+          <AnimatePresence mode="wait">
+            {isActive && !navHidden && <Nav increase={navHidden} />}
+          </AnimatePresence>
+        </motion.div>
+      {/* </motion.div> */}
+      {/* // adding overdisplayed navbar */}
+      <motion.div
+        className="Navbar-changeable"
+      >
+        <div className="navbar-inside-container">
+          <div className="navbar-left-component">
+            <div className="navbar-left-inner-component">
+              <div className="logo-component">
+                <img
+                  src={require("../../images/navbar/TTam Logo colour@3x.png")}
+                  className="twentytwoAMM-logo-navbar"
+                  alt="twentytwoAM"
+                ></img>
+              </div>
+            </div>
+          </div>
+          <div className="navbar-element-right">
+            <div
+              onClick={() => {
+                setIsActive(!isActive);
+              }}
+              className={`button ${isActive ? "button-op" : ""}`}
+            >
+              <div
+                className={`${"burger"} ${isActive ? "burgerActive" : ""}`}
+              ></div>
             </div>
           </div>
         </div>
-        <div className="navbar-element-right">
-          <div
-            onClick={() => {
-              setIsActive(!isActive);
-            }}
-            className={`button ${isActive ? "button-op" : ""}`}
-          >
-            <div
-              className={`${"burger"} ${isActive ? "burgerActive" : ""}`}
-            ></div>
-          </div>
-        </div>
-      </div>
-      <AnimatePresence mode="wait">{isActive && !navHidden  && <Nav  increase={navHidden} />}</AnimatePresence>
-    </motion.div>
-    // </motion.div>
+        <AnimatePresence mode="wait">
+          {isActive && <Nav />}
+        </AnimatePresence>
+      </motion.div>
+    </>
   );
 };
 
 export default Navbar;
-

@@ -1,4 +1,4 @@
-.ServiceArea{
+#ServiceArea{
     height: 100vh;
     width: 100%;
     margin: 0px 0px;
@@ -39,7 +39,6 @@
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
     gap: 10px;
-    background:white;
     cursor: default;
     width: 100%;
     height: 100%;
@@ -48,16 +47,17 @@
 
 .card-container{
     padding: 20px;
-    height: 14.5rem;
-    width: 15vw;
+    height: 16vw;
+    width: 16vw;
     /* height: 90%;
     width: 90%; */
     position: relative;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    box-shadow: rgba(50, 50, 93, 0.15) 0px 50px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.25) 0px -2px 6px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(50, 50, 93, 0.15) 0px 50px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.25) 0px -2px 6px 0px inset; */
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
+    background: white;
 }
 .mask-card-container{
     transform: scale(1);
@@ -117,7 +117,7 @@
 
 
 @media screen and (min-width:1400px)  {
-    .ServiceArea {
+    #ServiceArea {
         /* height: 80vh; */
         width: 100%;
         margin: 0px 0px;
@@ -126,7 +126,7 @@
 }
 
 @media screen and (min-height: 790px) {
-    .ServiceArea {
+    #ServiceArea {
         height: 80vh;
         width: 100%;
         margin: 0px 0px;
@@ -137,32 +137,54 @@
     .service-left-container-heading{
         font-size: 2.8vw;
     }
-    .card-container{
-        height: 13vw;
-        width: 12vw;
-    }
-    .ServiceArea{
+    #ServiceArea{
         height: 75vh;
-        margin: 5vh 0px;
+        margin: 8vh 0px;
     }
     .service-card-text{
         width: 100%;
-        top: 110px;
-        font-size: 0.8vw;
+        top: 80px;
+        font-size: 0.75vw;
         font-weight: 500;
     }
     .service-card-heading {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 600;
         margin-bottom: 20px;
+    }
+    .card-container{
+        padding: 20px;
+        height: 14vw;
+        width: 14vw;
     }
     .card-container:hover .mask-card-container{
         transform: scale(3);
         -webkit-mask-size: 280px;
         color:white;
     }
+    .service-area-right-container{
+        width: 60%;
+    }
+    .service-area-left-container{
+        width: 40%;
+    }
 }
 
+
+@media screen and (min-width:2000px){
+    .card-container{
+        padding: 20px;
+        height: 330px;
+        width: 14vw;
+    }
+}
+@media screen and (min-width:2300px){
+    .card-container{
+        padding: 20px;
+        height: 330px;
+        width: 12.5vw;
+    }
+}
 
 @media screen and (max-width:1250px) {
     .service-area-left-container {
@@ -181,6 +203,19 @@
     }
 }
 
+@media screen and (max-width:1400px) {
+    .card-container{
+        height: 17vw;
+        width: 16vw;
+    }
+}
+
+@media screen and (max-width:1350px) {
+    .card-container{
+        height: 18vw;
+        width: 16vw;
+    }
+}
 
 @media screen and (max-width:1150px) {
     .service-card-heading {
@@ -237,7 +272,7 @@
     .service-left-container-heading{
         margin-bottom: 30px;
     }
-    .ServiceArea{
+    #ServiceArea{
         height: 100%;
     }
 }
@@ -285,3 +320,4 @@
         display: flex;
     }
 }
+

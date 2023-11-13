@@ -14,6 +14,16 @@
     z-index: 90;
     display: block;
 }
+.menu-nav-changed{
+  height: 100vh;
+  background-color: rgb(41, 41, 41);
+  position: fixed;
+  right: 0;
+  top: 0;
+  color: white;
+  z-index: 90;
+  display: none;
+}
 .menu-body {
   box-sizing: border-box;
   height: 100%;
@@ -52,6 +62,17 @@ a {
   color: white;
   font-weight: 300;
   background: none;
+}
+
+@media screen and (max-width:2000px) {
+  .menu-nav {
+
+    display: none;
+}
+.menu-nav-changed{
+  background-color: red;
+  display: block;
+}
 }
 
 @media screen and (max-width:1100px) {

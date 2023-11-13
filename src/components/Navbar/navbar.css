@@ -2,9 +2,12 @@
   background: transparent;
   height: auto;
   width: 100%;
-  position: sticky;
+  position: sticky !important;
   top: 0;
   z-index: 999;
+}
+.Navbar-changeable{
+  display: none;
 }
 .navbar-inside-container {
   display: flex;
@@ -121,6 +124,48 @@
   transform: rotate(-45deg);
   top: 0px;
 }
+
+@media screen and (min-width:1500px) {
+  .Navbar{
+    display: none;
+  }
+  .Navbar-changeable{
+    display: block;
+    background: transparent;
+    height: auto;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+}
+@media screen and (min-width:2000px) {
+  .Navbar{
+    display: none;
+  }
+  .Navbar-changeable{
+    display: block;
+    background: transparent;
+    height: auto;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .logo-component{
+    height: 60px;
+    width: 360px;
+  }
+  .button{
+    height: 60px;
+    width: 60px;
+  }
+  .button-op{
+    height: 60px;
+    width: 60px;
+  }
+}
+
 
 @media screen and (max-width: 850px) {
   .navbar-inside-container {

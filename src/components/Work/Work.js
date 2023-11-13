@@ -50,7 +50,8 @@ const Work = () => {
 
 
   return (
-    <div className='Work'>
+    <div id='Work'>
+        <div className='work-container-title'>OUR WORK</div>
         <div className='inside-work-container'>
             <Work_Carousel workIn={workData} workImage={workImages? workImages : work_data[0].workImage} workNames={workNames?workNames :work_data[0].workName} amount={amount} currentComp={currentComp}/>
             <Company_Carousel workIn={workData} logoImage={logoImage} logoName={logoName} currentComp={currentComp}/>
