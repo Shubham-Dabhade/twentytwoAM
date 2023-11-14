@@ -20,29 +20,34 @@ const Intro = () => {
 //   },[count])
 
 
-    useEffect(()=>{
-        window.addEventListener("scroll", scrollProgress);
-        return ()=> window.removeEventListener("scroll", scrollProgress);
-    },[])
+    // useEffect(()=>{
+    //     window.addEventListener("scroll", scrollProgress);
+    //     return ()=> window.removeEventListener("scroll", scrollProgress);
+    // },[])
 
-    const scrollProgress = ()=>{
-        const scrollpx = document.documentElement.scrollTop;
-        const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // const scrollProgress = ()=>{
+    //     const scrollpx = document.documentElement.scrollTop;
+    //     const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-        const scrollLen = Math.ceil(scrollpx/ winHeightPx * 100 / 0.7);
+    //     const scrollLen = Math.ceil(scrollpx/ winHeightPx * 100 / 0.7);
 
-        if(scrollLen>0 && scrollLen<124){
-            setScrolledIntro(scrollLen);
-        }
-    }
+    //     if(scrollLen>0 && scrollLen<124){
+    //         setScrolledIntro(scrollLen);
+    //     }
+    // }
 
     const videoRef = useRef();
 
+    useEffect(()=>{
+      // videoRef.current.play();
+      videoRef.current.volume = 1;
+      // videoRef.current.muted = false;
+    },[]);
 
   return (
     <div className="Intro">
         <div className="inside-intro-container">
-        <video ref={videoRef} src={Video}  className="video-intro" autoPlay muted playsInline loop type='video/mp4'/>
+        <video ref={videoRef} src={Video}  className="video-intro" onPlay={()=>{console.log("playing")}} autoPlay playsInline loop type='video/mp4'/>
         </div>
     </div>
   );
