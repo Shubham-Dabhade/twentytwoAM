@@ -9,7 +9,7 @@ import Footer from "./Footer/Footer";
 
 const navItems = [
   {
-    title: "AboutUs",
+    title: "About Us",
     href: "#AboutUs",
   },
   {
@@ -21,12 +21,12 @@ const navItems = [
     href: "#Work",
   },
   {
-    title: "ContactUs",
+    title: "Contact Us",
     href: "#ContactUs",
   },
   {
     title: "UNBORING",
-    href: "/unboring",
+    href: "http://unboringb2b.com/",
   },
 ];
 
@@ -61,9 +61,6 @@ const Nav = ({increase}) => {
           }}
           className="nav"
         >
-          <div className="header">
-            <p>Navigation</p>
-          </div>
           {navItems.map((data, index) => {
             return (
               <Link
@@ -95,9 +92,6 @@ const Nav = ({increase}) => {
           }}
           className="nav"
         >
-          <div className="header">
-            <p>Navigation</p>
-          </div>
           {navItems.map((data, index) => {
             return (
               <Link

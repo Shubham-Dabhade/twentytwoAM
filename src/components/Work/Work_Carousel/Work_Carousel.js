@@ -9,9 +9,6 @@ const Work_Carousel = ({
   workNames,
   workImage,
 }) => {
-  const innerWorkContainer = useRef();
-  const workCardContainer = useRef();
-  const [trans, setTrans] = useState(0);
 
   const [workDetailsImages, setWorkDetailsImages] = useState();
   const [workDetailsNames, setWorkDetailsNames] = useState();
@@ -44,10 +41,14 @@ const Work_Carousel = ({
 
   // console.log(workDetailsImages);
 
+  // $(document).ready(function () {
+  //   $('#workCarousel').carousel({ interval: 2000, cycle: true });
+  // }); 
+
   return (
     <div
       id="workCarousel"
-      className="carousel slide"
+      className="carousel workCarousel slide d-block w-100 h-100"
       data-bs-ride="carousel"
       data-bs-touch="false"
       data-bs-pause="true"
@@ -62,7 +63,6 @@ const Work_Carousel = ({
           data-bs-interval="0001"
           style={{ height: "100%", borderRadius: "30px" }}
         >
-
         </div>
         {workDetailsName?.map((workDetail, index) => {
           return (
@@ -70,7 +70,7 @@ const Work_Carousel = ({
               className="carousel-item gradient-card"
               data-bs-interval="2000"
               style={{ height: "100%", borderRadius: "30px" }}
-              key={workDetail}
+              key={workDetailsImage[index]}
             >
               <img
                 src={require(`../../../images/work${workDetailsImage[index]}`)}
@@ -81,6 +81,24 @@ const Work_Carousel = ({
           );
         })}
       </div>
+      <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#workCarousel"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#workCarousel"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
     </div>
   );
 };

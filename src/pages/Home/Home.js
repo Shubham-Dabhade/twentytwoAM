@@ -8,7 +8,7 @@ import Intro from "../../components/Intro/Intro";
 import Work from "../../components/Work/Work";
 import { useEffect } from "react";
 // import Lenis from "@studio-freight/lenis";
-import Team from "../../components/Team/Team";
+// import Team from "../../components/Team/Team";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Footer from "../../components/Footer/Footer";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -37,10 +37,11 @@ const Home = () => {
       </AnchorLink>
     </>
     }
+    <Intro/>
       <AboutUs />
       <ServiceArea />
       <SolutionTrack />
-      <Team />
+      {/* <Team /> */}
       <Work />
       <ContactUs
         changeTheContactButton={changeTheContactButton}

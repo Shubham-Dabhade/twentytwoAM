@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { Component, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 // import Lenis from "@studio-freight/lenis";
+import HashLoader from "react-spinners/HashLoader";
 
 import {
   BrowserRouter as Router,
@@ -10,6 +11,7 @@ import {
   Route,
   useRoutes,
 } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
 //   useEffect(() => {
@@ -27,12 +29,22 @@ function App() {
 //     requestAnimationFrame(raf)
 // }, []);
 
+const [loading,setLoading] = useState(false);
+
+  useEffect(()=>{
+    setLoading(true);
+    setTimeout(()=>{
+      setLoading(false);
+    },3000);
+  },[]);
+
   return (
     <Router>
       <div className="App">
+
         <Navbar />
         <Routes>
-          <Route exact path="/twentytwoAM/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
         </Routes>
       </div>
     </Router>

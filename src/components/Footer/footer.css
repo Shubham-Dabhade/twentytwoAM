@@ -16,7 +16,7 @@
 
 .top-footer-container{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     width: 100%;
     margin-bottom: 10px;
     padding: 50px 0px;
@@ -125,7 +125,7 @@
 }
 
 
-/* teams container */
+/* links container */
 .link-container-header{
     font-size: 21px;
     font-weight: 500;
@@ -146,6 +146,21 @@
     font-weight: 450;
 }
 
+.ttam-home-unboring-navigator-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.ttam-home-unboring-navigator-container a{
+    height: max-content;
+    width: fit-content;
+}
+.ttam-home-unboring-navigator-img{
+    height: 100px;
+    width: 100%;
+}
+
 
 /* bottom container */
 .bottom-footer-container{
@@ -162,6 +177,12 @@
     .top-footer-container {
         grid-template-columns: auto auto;
         gap: 45px 0px;
+    }
+    .ttam-home-unboring-navigator-container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
     }
 }
 
@@ -180,11 +201,19 @@
     .bottom-footer-container {
         font-size: 13px;
     }
+    .ttam-home-unboring-navigator-img{
+        height: 80px;
+        width: 100%;
+    }
 }
 
 @media screen  and (max-width:450px){
     .ttam-logo-container{
         height: 40px;
         width: 240px;
+    }
+    .ttam-home-unboring-navigator-img{
+        height: 80px;
+        width: auto;
     }
 }

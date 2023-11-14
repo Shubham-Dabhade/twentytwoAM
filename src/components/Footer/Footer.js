@@ -49,11 +49,6 @@ const Footer = () => {
                 </AnchorLink>
               </li>
               <li className="list-info-link">
-                <AnchorLink href="#Team" className="list-links">
-                  Our Team
-                </AnchorLink>
-              </li>
-              <li className="list-info-link">
                 <AnchorLink href="#Work" className="list-links">
                   Our Work
                 </AnchorLink>
@@ -64,6 +59,15 @@ const Footer = () => {
                 </AnchorLink>
               </li>
             </ul>
+          </div>
+          <div className="ttam-home-unboring-navigator-container">
+            <a href="http://unboringb2b.com/" target="_blank">
+              <img
+                src={require("../../images/navbar/unmboring tm@3x.png")}
+                className="ttam-home-unboring-navigator-img"
+                alt=""
+              />
+            </a>
           </div>
         </div>
         <div className="bottom-footer-container">© 2023 TwentyTwoAM</div>

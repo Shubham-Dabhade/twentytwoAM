@@ -84,7 +84,7 @@ const AboutUs = () => {
           </motion.div>
           <motion.div className="aboutus-left-description" variants={aboutUsAnimationSlideUp}>
             We bring value through our strategy and design solutions, to bring
-            consistency in your brand communication. We build brand identity
+            consistency in your brand communication. We build the brand identity
             through various platforms with our SOLUTION TRACKS to increase
             memorability of your brand.
           </motion.div>

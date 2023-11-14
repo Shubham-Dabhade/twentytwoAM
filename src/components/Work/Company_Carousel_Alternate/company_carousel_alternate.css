@@ -1,0 +1,92 @@
+.Company_Carousel_Alternate_Container{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 30px;
+  overflow: hidden;
+  height: max-content;
+}
+#logoNameCarouselAlternate-container{
+    height: 50%;
+}
+.logoNameCarouselAlternate-item-container{
+    height: 10vh;
+}
+.logoNameCarouselAlternate-item-img-container{
+    height: 100%;
+    width: 100%;
+}
+
+.logoNameCarouselAlternate-caption-container{
+
+    position: absolute;
+    top: 10%;
+}
+.logoNameCarouselAlternate-caption-container h5{
+    font-size: 30px !important;
+    font-weight: 600;
+    background: -webkit-linear-gradient(27deg, rgba(34,86,195,1) 0%, rgba(251,0,20,1) 15%, rgba(253,187,45,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#workNameCarouselAlternate-container{
+    height: 50%;
+}
+.workNameCarouselAlternate-item-container{
+    height: 10vh;
+}
+.workNameCarouselAlternate-caption-container{
+    position: absolute;
+    top: 10%;
+}
+.workNameCarouselAlternate-caption-container h5{
+    font-size: 20px !important;
+    font-weight: 600;
+    color: black;
+}
+
+@media screen and (max-width:850px) {
+    .logoNameCarouselAlternate-item-container{
+        height: 15vh;
+    }
+    .workNameCarouselAlternate-item-container{
+        height: 15vh;
+    }
+}
+
+@media screen and (max-width:380px){
+    .logoNameCarouselAlternate-caption-container h5{
+        font-size: 25px !important;
+    }
+    .workNameCarouselAlternate-caption-container{
+        position: absolute;
+        top: 5%;
+    }
+    .workNameCarouselAlternate-caption-container h5{
+        font-size: 16px !important;
+        font-weight: 600;
+        color: black;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .logoNameCarouselAlternate-item-container{
+        height: 10vh;
+    }
+    .workNameCarouselAlternate-item-container{
+        height: 10vh;
+    }
+    .logoNameCarouselAlternate-caption-container h5{
+        font-size: 25px !important;
+    }
+    .workNameCarouselAlternate-caption-container{
+        position: absolute;
+        top: 5%;
+    }
+    .workNameCarouselAlternate-caption-container h5{
+        font-size: 15px !important;
+        font-weight: 600;
+        color: black;
+    }
+}

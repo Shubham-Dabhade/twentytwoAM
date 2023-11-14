@@ -30,7 +30,8 @@
     font-size: 20px;
     padding: 20px;
     transform: rotate(-90deg);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    box-shadow: rgba(14, 30, 37, 0.02) 0px 2px 2px 0px, rgba(14, 30, 37, 0.20) 0px 2px 12px 0px;
 }
 
 .sticky-contactus-button-large:hover{

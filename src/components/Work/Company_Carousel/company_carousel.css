@@ -27,9 +27,6 @@
   width: 100% !important;
   height: 50% !important;
   overflow: hidden !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
   background: white !important;
   text-align: center !important;
 }
@@ -52,7 +49,7 @@
   position: absolute;
   text-align: center !important;
   width: 100%;
-  top: 40%;
+  top: 40% !important;
   left: 10px;
   font-size: 55px !important;
   font-weight: 600;
@@ -81,6 +78,10 @@
 }
 
 
+#workNameCarouselAlternate{
+  display: none !important;
+}
+
 @media screen and (max-width: 1500px) {
   .carousel-caption-work-name h5{
     font-size: 35px !important;
@@ -101,21 +102,56 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
   .logoCarouselContainer{
-    height: 50% !important;
+    height: 40% !important;
     flex: none ;
   }
   #logoCarousel {
     /* flex: none; */
-    height: 50% !important;
-  }
-  #workNameCarouse{
-    height: 50% !important;
-  }
-}
-@media screen and (max-width: 850px) {
+    /* height: 50% !important;
+  } */
+  /* #workNameCarouse{ */
+    /* height: 50% !important;
+  } */
+/* } */ 
+/* @media screen and (max-width: 850px) {
   .logoCarouselContainer{
     height: 30% !important;
   }
-}
+} */
+
+
+/* @media screen and (max-width:450px) {
+  .carousel-caption-logo-name h5{
+
+    top: 30%;
+
+  }
+  .carousel-caption-work-name h5{
+    font-size: 1.3rem !important;
+    top: 30%;
+  }
+} */
+
+/* @media screen and (max-width:450px) {
+  .logoCarouselContainer{
+    height: 50% !important;
+    flex: none ;
+  }
+  .carousel-caption-logo-name h5{
+    top: 35%;
+    font-size: 24px !important;
+  }
+  .carousel-caption-work-name h5{
+    font-size: 1rem !important;
+    top: 35%;
+  }
+} */
+
+/* @media screen and (max-width:370px) {
+  .logoCarouselContainer{
+    height: 40% !important;
+    flex: none ;
+  }
+} */

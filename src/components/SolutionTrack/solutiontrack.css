@@ -80,13 +80,14 @@
   transition: all 0.25s ease-out;
   height: auto;
   width: 100%;
-  content: "";
+
   cursor: default;
   top: -20px;
   left: -20px;
   mask-image: url("../../images/mask.svg");
   object-fit: contain;
   mask-repeat: no-repeat;
+  -webkit-mask-size: 40px;
   mask-size: 40px;
   position: absolute;
   color: black;
@@ -155,6 +156,8 @@
   padding-bottom: 0px !important;
 }
 
+
+
 @media screen and (min-height: 760px) {
   .SolutionTrack {
     /* height: 153vh; */
@@ -187,7 +190,7 @@
 
 @media screen and (min-width: 1400px) {
   .SolutionTrack {
-    height: 173vh;
+    height: 193vh;
   }
 }
 
@@ -228,22 +231,22 @@
 
 @media screen and (min-width: 2000px) {
   .SolutionTrack {
-    height: 160vh;
+    height: 170vh;
     overflow: hidden;
   }
   .solution-track-right-container {
     font-size: 2.8vw;
-    text-align: center;
+    text-align: right;
   }
   .solutions-heading {
     font-size: 34px;
   }
   .solution-card {
-    height: 330px;
+    height: 350px;
     max-width: 14vw;
   }
   .solution-card-9 {
-    height: 330px;
+    height: 350px;
     max-width: 14vw;
   }
   .solution-card:hover .solution-card-mask {
@@ -277,7 +280,7 @@
 
 @media screen and (min-width: 2300px) {
   .SolutionTrack {
-    height: 160vh;
+    height: 180vh;
     overflow: hidden;
   }
 }
@@ -314,7 +317,7 @@
 
 @media screen and (max-width: 1300px) {
   .SolutionTrack {
-    height: 207vh;
+    height: 237vh;
     width: 100%;
     margin: 50px 0px;
     padding: 20px 0px;
@@ -489,4 +492,6 @@
   .solution-track-right-container {
     text-align: left;
   }
+
 }
+

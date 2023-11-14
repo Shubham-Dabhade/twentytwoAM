@@ -65,14 +65,20 @@
     transition: all 0.25s ease-out;
     height: 100%;
     width: 100%;
-    content:"";
     cursor: default;
-    top: -20px;
-    left: -20px;
-    mask-image: url("../../images/mask.svg");
+    top: -50%;
+    left:  -50%;
+    -webkit-mask-image: url("../../images/mask-1.png");
+    mask-image: url("../../images/mask-1.png");
     object-fit: contain;
+    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 40px;
     mask-size: 40px;
+    -webkit-mask-type: alpha;
+    mask-type: alpha;
     position: absolute;
     color: black;
     font-weight: 600;
@@ -96,8 +102,9 @@
     color:white;
 }
 .card-container:hover .mask-card-container{
-    transform: scale(2);
+    transform: scale(3);
     -webkit-mask-size: 280px;
+    mask-size: 280px;
     color:white;
 }
 
@@ -159,7 +166,8 @@
     }
     .card-container:hover .mask-card-container{
         transform: scale(3);
-        -webkit-mask-size: 280px;
+        -webkit-mask-size: 380px;
+        mask-size: 380px;
         color:white;
     }
     .service-area-right-container{
@@ -176,6 +184,9 @@
         padding: 20px;
         height: 330px;
         width: 14vw;
+    }
+    .service-card-text{
+        font-size: 21px;
     }
 }
 @media screen and (min-width:2300px){
@@ -303,6 +314,7 @@
     }
     .card-container:hover .mask-card-container{
         -webkit-mask-size: 400px;
+        mask-size: 400px;
         transform: scale(3);
         color:white;
     }
@@ -312,6 +324,10 @@
 }
 
 @media screen and (max-width: 470px){
+    .card-container {
+        height: 270px;
+        width: 100%;
+    }
     .service-left-container-heading {
         font-size: 1.7em;
     }

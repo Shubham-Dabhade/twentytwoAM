@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./intro.css";
 import { Controller, Scene } from "react-scrollmagic";
+import Video from "../../images/intro/intro.mp4";
 
 const Intro = () => {
   const introContainer = useRef();
@@ -35,16 +36,15 @@ const Intro = () => {
         }
     }
 
+    const videoRef = useRef();
+
+
   return (
-    // <div className="Intro-Outer-Container">
-        // <Controller>
-        // <Scene duration={45000} triggerElement={".Intro"} triggerHook={0} pin pushFollowers="false" >
-            <div className="Intro" ref={introContainer}>
-                {/* <img className="intro-image" src={require(`../../images/new-frames/frame${scrolledIntro.toString().padStart(4,"0")}1.png`)} alt="" /> */}
-            </div>
-        // </Scene>
-        // </Controller>
-    // </div>
+    <div className="Intro">
+        <div className="inside-intro-container">
+        <video ref={videoRef} src={Video}  className="video-intro" autoPlay muted playsInline loop type='video/mp4'/>
+        </div>
+    </div>
   );
 };
 

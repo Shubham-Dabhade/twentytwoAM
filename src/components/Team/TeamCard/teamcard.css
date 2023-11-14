@@ -200,6 +200,22 @@ svg#curve {
   }
 }
 
+@media screen and (max-height: 800px) {
+  .card {
+    width: 50vh;
+    height: 50vh;
+  }
+
+  .card:hover .connection {
+    transform: translateY(-70px);
+  }
+  .info {
+    height: 35vh;
+  }
+  .card:hover .info {
+    transform: translateY(-105px);
+  }
+}
 
 
 @media screen and (max-width: 1500px) {
@@ -239,6 +255,13 @@ svg#curve {
   }
 }
 @media screen and (max-width: 1350px) {
+  .card {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+@media screen and (max-width: 1300px) {
   .card {
     width: 25vw;
     height: 25vw;
@@ -315,22 +338,7 @@ svg#curve {
 
 
 
-@media screen and (max-height: 800px) {
-  .card {
-    width: 50vh;
-    height: 50vh;
-  }
 
-  .card:hover .connection {
-    transform: translateY(-70px);
-  }
-  .info {
-    height: 35vh;
-  }
-  .card:hover .info {
-    transform: translateY(-105px);
-  }
-}
 
 @media screen and (max-width: 790px) {
   .card {
@@ -427,6 +435,19 @@ svg#curve {
   }
   .card:hover .info {
     transform: translateY(-1%) !important;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .card {
+    width: 40vh;
+    height: 40vh;
+  }
+  .card:hover .connection {
+    transform: translateY(-80px) !important;
+  }
+  .card:hover .info {
+    transform: translateY(-10%) !important;
   }
 }
 

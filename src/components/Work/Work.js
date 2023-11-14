@@ -4,6 +4,8 @@ import Work_Carousel from './Work_Carousel/Work_Carousel';
 import Company_Carousel from './Company_Carousel/Company_Carousel';
 
 import work_data from '../../work_details';
+import Work_Carousel_Alternate from './Work_Carousel_Alternate/Work_Carousel_Alternate';
+import Company_Carousel_Alternate from './Company_Carousel_Alternate/Company_Carousel_Alternate';
 
 const Work = () => {
 
@@ -52,9 +54,13 @@ const Work = () => {
   return (
     <div id='Work'>
         <div className='work-container-title'>OUR WORK</div>
-        <div className='inside-work-container'>
-            <Work_Carousel workIn={workData} workImage={workImages? workImages : work_data[0].workImage} workNames={workNames?workNames :work_data[0].workName} amount={amount} currentComp={currentComp}/>
-            <Company_Carousel workIn={workData} logoImage={logoImage} logoName={logoName} currentComp={currentComp}/>
+        <div className='inside-work-container1'>
+            <Work_Carousel workIn={workData}  workImage={workImages? workImages : work_data[0].workImage} workNames={workNames?workNames :work_data[0].workName} amount={amount} currentComp={currentComp}/>
+            <Company_Carousel workIn={workData}  logoImage={logoImage} logoName={logoName} currentComp={currentComp}/>
+        </div>
+        <div className="inside-work-container2">
+            <Work_Carousel_Alternate/>
+            <Company_Carousel_Alternate/>
         </div>
     </div>
   )
