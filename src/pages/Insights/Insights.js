@@ -148,6 +148,7 @@ const tags = [
               style={{ height: "inherit", width: "2.5rem", marginLeft: "10px" }}
             />
           </div>
+          <a href={`/insights/posts/${insightLatestEl.id}`}>
           <div className="insight-top-container-new-insight-container">
             <div className="insight-top-container-new-insight-title">
               {insightLatestEl.title}
@@ -161,6 +162,7 @@ const tags = [
               />
             </div>
           </div>
+          </a>
         </div>
         <div className="insight-middle-container">
           <div className="inner-arrow left-arrow">

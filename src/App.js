@@ -14,6 +14,7 @@ import { useState } from "react";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import Insights from "./pages/Insights/Insights";
 import Posts from "./pages/Posts/Posts";
+import Loading from "./components/Loading/Loading";
 
 function App() {
   //   useEffect(() => {
@@ -31,15 +32,11 @@ function App() {
   //     requestAnimationFrame(raf)
   // }, []);
 
-  const [loading, setLoading] = useState(false);
+
   const [activeTag,setActiveTag] = useState();
 
-  // useEffect(()=>{
-  //   setLoading(true);
-  //   setTimeout(()=>{
-  //     setLoading(false);
-  //   },3000);
-  // },[]);
+
+
 
   const sendActiveTag = (tag)=>{
     console.log(tag);
@@ -48,9 +45,10 @@ function App() {
 
   return (
     <Router>
+    {}
       <div className="App">
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home  />} />
           <Route exact path="/contactus" element={<ContactUs />} />
           <Route exact path="/insights" element={<Insights sendActiveTag={sendActiveTag} />} />
           <Route exact path="/insights/posts/:id" element={<Posts />} />

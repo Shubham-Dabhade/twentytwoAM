@@ -86,7 +86,7 @@ const Posts = ({ activeTag }) => {
       <div className="Posts">
         <div className="insidePostsContainer">
           <div className="posts-tree-container">
-            <a href="/insights">Insights</a> > <a>Posts</a> >{" "}
+            <a href="/insights">Insights</a> {">"} <a>Posts</a> {">"} {" "}
             <a
               href={`/insights/posts/${postData?.id}`}
             >{`${postData?.title}`}</a>

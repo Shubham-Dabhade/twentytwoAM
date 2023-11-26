@@ -2,71 +2,50 @@ import React, { useEffect, useRef, useState } from "react";
 import "./intro.css";
 import { Controller, Scene } from "react-scrollmagic";
 import Video from "../../images/intro/intro.mp4";
-const Intro = () => {
-  const introContainer = useRef();
-  const introVideo = useRef();
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedVideo } from "@cloudinary/react";
 
-  const [count, setCount] = useState(1);
-  const [scrolledIntro, setScrolledIntro] = useState(1);
-  //   const []
+const Intro = ({checkLoading}) => {
 
-  //   useEffect(()=>{
-  //     if(count < 578){
-  //         setTimeout(()=>{
-  //             setCount(count+1);
-  //         },50)
-  //     }
-  //   },[count])
-
-  // useEffect(()=>{
-  //     window.addEventListener("scroll", scrollProgress);
-  //     return ()=> window.removeEventListener("scroll", scrollProgress);
-  // },[])
-
-  // const scrollProgress = ()=>{
-  //     const scrollpx = document.documentElement.scrollTop;
-  //     const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-  //     const scrollLen = Math.ceil(scrollpx/ winHeightPx * 100 / 0.7);
-
-  //     if(scrollLen>0 && scrollLen<124){
-  //         setScrolledIntro(scrollLen);
-  //     }
-  // }
 
   const videoRef = useRef();
-  const buttonRef = useRef();
 
-  const [playing,setPlaying] = useState(false);
+  const [ loading,setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   // videoRef.current.play();
-  //   videoRef.current.volume = 1;
-  //   // videoRef.current.muted = false;
+  useEffect(()=>{
 
-
-
-  //   if(playing){
-  //     Play();
-  //   }
-  // }, []);
+    checkLoading(loading);
+    
+  },[loading]);
 
   return (
     <div className="Intro">
+      <video
+        ref={videoRef}
+        src={Video}
+        id="video"
+        className="video-intro"
+        autoPlay
+        muted
+        preload={'auto'}
+        playsInline
+        loop
+        type="video/mp4"
+        onLoadedData={()=>{setLoading(false)}}
+      />
 
-
-        <video
-          ref={videoRef}
-          src={Video}
-          id='video'
-          className="video-intro"
-          autoPlay
-          muted
-          playsInline
-          loop
-          type="video/mp4"
-        />
-      </div>
+      {/* <AdvancedVideo
+        id="video"
+        className="video-intro"
+        cldVid={cld.video(Video).quality("auto")}
+        cldPoster="auto"
+        // autoPlay
+        // muted
+        // playsInline
+        // loop
+        // type="video/mp4"
+      /> */}
+    </div>
   );
 };
 
