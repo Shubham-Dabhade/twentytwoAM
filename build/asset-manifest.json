@@ -1,12 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.b261e8c3.css",
-    "main.js": "/static/js/main.39b0d29f.js",
+    "main.css": "/static/css/main.82b889fc.css",
+    "main.js": "/static/js/main.df06afff.js",
     "static/media/intro.mp4": "/static/media/intro.31dd1ecbcfafe9e336aa.mp4",
+    "static/media/images8.jpg": "/static/media/images8.0b7ab0def574572b16aa.jpg",
+    "static/media/images2.jpg": "/static/media/images2.75c5381e203728e82200.jpg",
+    "static/media/images3.jpg": "/static/media/images3.d50c95251f900c38a542.jpg",
+    "static/media/images6.jpg": "/static/media/images6.9e3eb62bfded68b14853.jpg",
+    "static/media/images9.jpg": "/static/media/images9.3d3cd9498f3110fa463e.jpg",
+    "static/media/images10.jpg": "/static/media/images10.8cfd4816716c9fd93ba4.jpg",
+    "static/media/images11.jpg": "/static/media/images11.87f507001e59bc4bb944.jpg",
+    "static/media/images4.jpg": "/static/media/images4.9a364d1fef73570a98c1.jpg",
+    "static/media/images12.jpg": "/static/media/images12.d7a3d234203d96ed288d.jpg",
     "static/media/brand_assets.png": "/static/media/brand_assets.890ad7a2fda6130c5860.png",
+    "static/media/images7.jpg": "/static/media/images7.55b79742a86d9a25046c.jpg",
+    "static/media/images5.jpg": "/static/media/images5.5714df23a1b9519c0c32.jpg",
     "static/media/marketing_&_communication.png": "/static/media/marketing_&_communication.25506144d11168b8e87c.png",
     "static/media/5118756-removebg.png": "/static/media/5118756-removebg.15bbe0f3184d21ef4f28.png",
-    "static/media/marketing___communication.png": "/static/media/marketing___communication.445cb97901262ec8e05e.png",
+    "static/media/images1.jpg": "/static/media/images1.e42726b6ff87244c07e4.jpg",
     "static/media/website_design.png": "/static/media/website_design.bb09b20c3a333a66e116.png",
     "static/media/TTam Logo colour@3x.png": "/static/media/TTam Logo colour@3x.2c174e0d7d0082a4c8da.png",
     "static/media/block-003@3x.png": "/static/media/block-003@3x.2520b6468fdc098f482b.png",
@@ -25,11 +36,11 @@
     "static/media/sec02-block-09@3x.png": "/static/media/sec02-block-09@3x.f0cac0ffcaafc422022b.png",
     "index.html": "/index.html",
     "static/media/mask.svg": "/static/media/mask.e9dd8d999caa90c178bc.svg",
-    "main.b261e8c3.css.map": "/static/css/main.b261e8c3.css.map",
-    "main.39b0d29f.js.map": "/static/js/main.39b0d29f.js.map"
+    "main.82b889fc.css.map": "/static/css/main.82b889fc.css.map",
+    "main.df06afff.js.map": "/static/js/main.df06afff.js.map"
   },
   "entrypoints": [
-    "static/css/main.b261e8c3.css",
-    "static/js/main.39b0d29f.js"
+    "static/css/main.82b889fc.css",
+    "static/js/main.df06afff.js"
   ]
 }
