@@ -68,8 +68,8 @@
     cursor: default;
     top: -50%;
     left:  -50%;
-    -webkit-mask-image: url("../../images/mask-1.png");
-    mask-image: url("../../images/mask-1.png");
+    -webkit-mask-image: url("../../images/mask.svg");
+    mask-image: url("../../images/mask.svg");
     object-fit: contain;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;

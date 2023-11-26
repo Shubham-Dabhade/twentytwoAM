@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
 
             <div className="ttam-links-footer">
-              <div className="ttam-link-container">info[at]twentytwoam.com</div>
+               <a href="mailto:apoorv@twentytwoam.com" style={{textDecoration:"none",color:'black'}}><div className="ttam-link-container" style={{color:"black"}}>info[at]twentytwoam.com</div></a>
               <div className="ttam-link-container">+91 9820138391</div>
             </div>
           </div>
@@ -54,9 +54,14 @@ const Footer = () => {
                 </AnchorLink>
               </li>
               <li className="list-info-link">
-                <AnchorLink href="#ContactUs" className="list-links">
-                  ContactUs
-                </AnchorLink>
+                <a href="/contactus" className="list-links">
+                  Contact Us
+                </a>
+              </li>
+              <li className="list-info-link">
+                <a href="/insights" className="list-links">
+                  Insights
+                </a>
               </li>
             </ul>
           </div>
@@ -70,7 +75,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="bottom-footer-container">© 2023 TwentyTwoAM</div>
+        <div className="bottom-footer-container">© 2023 TwentyTwo AM</div>
       </div>
     </div>
   );

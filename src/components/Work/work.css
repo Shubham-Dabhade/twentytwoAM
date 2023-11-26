@@ -144,6 +144,7 @@
     height:95vh;
   }
   .work-container-title{
+    text-align: left;
     font-size: 1.8rem;
     height: 10%;
   }

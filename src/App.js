@@ -3,7 +3,6 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 // import Lenis from "@studio-freight/lenis";
-import HashLoader from "react-spinners/HashLoader";
 
 import {
   BrowserRouter as Router,
@@ -12,39 +11,49 @@ import {
   useRoutes,
 } from "react-router-dom";
 import { useState } from "react";
+import ContactUs from "./pages/ContactUs/ContactUs";
+import Insights from "./pages/Insights/Insights";
+import Posts from "./pages/Posts/Posts";
 
 function App() {
-//   useEffect(() => {
-//     const lenis = new Lenis()
+  //   useEffect(() => {
+  //     const lenis = new Lenis()
 
-//     lenis.on('scroll', (e) => {
-//       console.log(e)
-//     })
-    
-//     function raf(time) {
-//       lenis.raf(time)
-//       requestAnimationFrame(raf)
-//     }
-    
-//     requestAnimationFrame(raf)
-// }, []);
+  //     lenis.on('scroll', (e) => {
+  //       console.log(e)
+  //     })
 
-const [loading,setLoading] = useState(false);
+  //     function raf(time) {
+  //       lenis.raf(time)
+  //       requestAnimationFrame(raf)
+  //     }
 
-  useEffect(()=>{
-    setLoading(true);
-    setTimeout(()=>{
-      setLoading(false);
-    },3000);
-  },[]);
+  //     requestAnimationFrame(raf)
+  // }, []);
+
+  const [loading, setLoading] = useState(false);
+  const [activeTag,setActiveTag] = useState();
+
+  // useEffect(()=>{
+  //   setLoading(true);
+  //   setTimeout(()=>{
+  //     setLoading(false);
+  //   },3000);
+  // },[]);
+
+  const sendActiveTag = (tag)=>{
+    console.log(tag);
+    setActiveTag(tag);
+  }
 
   return (
     <Router>
       <div className="App">
-
-        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/contactus" element={<ContactUs />} />
+          <Route exact path="/insights" element={<Insights sendActiveTag={sendActiveTag} />} />
+          <Route exact path="/insights/posts/:id" element={<Posts />} />
         </Routes>
       </div>
     </Router>

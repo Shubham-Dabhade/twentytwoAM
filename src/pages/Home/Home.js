@@ -9,7 +9,7 @@ import Work from "../../components/Work/Work";
 import { useEffect } from "react";
 // import Lenis from "@studio-freight/lenis";
 // import Team from "../../components/Team/Team";
-import ContactUs from "../../components/ContactUs/ContactUs";
+// import ContactUs from "../../components/ContactUs/ContactUs";
 import Footer from "../../components/Footer/Footer";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -26,15 +26,17 @@ const Home = () => {
 
 
   return (
+    <>
+    <Navbar/>
     <div className="Home">
     { inView &&
     <>
-      <AnchorLink href="#ContactUs" className="sticky-contactus-button-large">
+      <a href="/contactus" className="sticky-contactus-button-large">
         <div>CONTACT US</div>
-      </AnchorLink>
-      <AnchorLink href="#ContactUs" className="sticky-contactus-button-small">
+      </a>
+      <a href="/contactus" className="sticky-contactus-button-small">
         <PhoneIcon/>
-      </AnchorLink>
+      </a>
     </>
     }
     <Intro/>
@@ -43,12 +45,13 @@ const Home = () => {
       <SolutionTrack />
       {/* <Team /> */}
       <Work />
-      <ContactUs
+      {/* <ContactUs
         changeTheContactButton={changeTheContactButton}
         outOfView={outOfView}
-      />
+      /> */}
       <Footer />
     </div>
+    </>
   );
 };
 

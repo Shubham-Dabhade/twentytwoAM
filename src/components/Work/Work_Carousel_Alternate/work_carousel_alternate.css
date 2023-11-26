@@ -1,19 +1,20 @@
 #workImageCarouselAlternate-container {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  border-radius: 30px;
-  overflow: hidden;
-  height: max-content;
-}
-.work_carousel_alternate_item_container {
-  height: max-content;
-  border-radius: 30px;
-  overflow: hidden;
-  position: relative;
-}
-.work_carousel_alternate_item_container-img {
-  height: 100%;
-  width: 100%;
-  border-radius: 30px !important;
-  overflow: hidden;
-}
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 30px;
+    overflow: hidden;
+    height: max-content;
+  }
+  .work_carousel_alternate_item_container {
+    height: max-content;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+  .work_carousel_alternate_item_container-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px !important;
+    overflow: hidden;
+  }
+  

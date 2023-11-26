@@ -4,8 +4,8 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer">
-      <a href="/" target="_blank">LinkedIn</a>
-      <a href="/" target="_blank">Gmail</a>
+      <a href="https://www.linkedin.com/company/twentytwo-am/" target="_blank">LinkedIn</a>
+      <a href="mailto:apoorv@twentytwoam.com" target="_blank">Gmail</a>
     </div>
   );
 };

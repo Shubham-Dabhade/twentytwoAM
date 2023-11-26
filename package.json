@@ -19,6 +19,7 @@
     "bootstrap": "^5.3.2",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
+    "jquery": "^3.7.1",
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-bootstrap": "^2.9.1",
@@ -30,6 +31,7 @@
     "react-scrollmagic": "^2.3.0",
     "react-spinners": "^0.13.8",
     "scrollmagic": "^2.0.8",
+    "shortid": "^2.2.16",
     "styled-components": "^6.1.1",
     "web-vitals": "^2.1.4"
   },
@@ -60,6 +62,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.27",
     "gh-pages": "^6.0.0"
   }
 }

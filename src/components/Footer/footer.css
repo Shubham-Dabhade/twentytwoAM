@@ -70,7 +70,6 @@
 
 .ttam-links-footer{
     display: flex;
-    align-items: center;
     justify-content: flex-start;
     text-align: left;
     flex-direction: column;

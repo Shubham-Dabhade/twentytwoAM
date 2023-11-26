@@ -22,7 +22,11 @@ const navItems = [
   },
   {
     title: "Contact Us",
-    href: "#ContactUs",
+    href: "/contactus",
+  },
+  {
+    title: "Insights",
+    href: "/insights",
   },
   {
     title: "UNBORING",
