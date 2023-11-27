@@ -1,0 +1,11 @@
+.inside-suggestion-container{
+    display: flex;
+    flex-direction: column;
+}
+.suggestion-title{
+    font-size:clamp(0.8rem, 0.5774rem + 2.8936vw, 3.126rem);
+    font-weight:500;
+}
+.suggestions-card-container{
+    margin: 20px 0px;
+}

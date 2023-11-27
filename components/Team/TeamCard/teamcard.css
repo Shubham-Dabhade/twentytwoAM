@@ -1,0 +1,466 @@
+.TeamCard {
+  flex: 1;
+  padding: 20px 0px;
+  display: flex;
+}
+
+.card {
+  /* position: absolute; */
+  border-radius: 8px;
+  height: 20vw;
+  width: 20vw;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.team-info {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: 30%;
+  padding: 0px 20px;
+}
+.team-member-name {
+  font-size: 1.6vw;
+  margin-bottom: 10px;
+}
+
+.card-blur {
+  position: absolute;
+  height: 100%;
+  width: calc(100% + 1px);
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.15s ease-in;
+}
+
+.card:hover .card-blur {
+  opacity: 0.6;
+}
+
+.footer {
+  z-index: 1;
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  bottom: 0;
+}
+
+svg#curve {
+  position: absolute;
+  fill: white;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  width: 400px;
+  height: 450px;
+}
+
+.connections {
+  height: 80px;
+  width: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  margin: auto;
+}
+
+.connection {
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  background-color: white;
+  display: inline-block;
+  padding: 5px;
+  margin-right: 25px;
+  transform: translateY(200px);
+  text-decoration: none;
+  transition: transform 1s cubic-bezier(0.46, 1.48, 0.18, 0.81);
+}
+
+.card:hover .connection {
+  transform: translateY(-145px);
+}
+
+.info {
+  font-family: Inconsolata;
+  transform: translateY(250px);
+  background: white;
+  height: 30vh;
+  width: 100%;
+  transition: transform 1s cubic-bezier(0.31, 1.21, 0.64, 1.02);
+}
+
+.card:hover .info {
+  transform: translateY(-185px);
+}
+
+.name {
+  font-weight: bolder;
+  padding-top: 5px;
+}
+.team-background {
+  width: 100%;
+  font-size: 14px;
+  padding: 30px;
+  text-align: left;
+}
+
+.job {
+  margin-top: 10px;
+}
+
+.connection.email {
+  height: 35px;
+  width: 35px;
+  margin-left: 20px;
+  padding: 0px;
+  border-radius: 100%;
+  overflow: hidden;
+  transition-delay: 0.06s;
+}
+
+.connection.linkedin {
+  transition-delay: 0.12s;
+}
+
+.connection.email .icon {
+  height: 18px;
+  width: 18px;
+  margin-top: 9px;
+  margin-left: 8px;
+  background-position: center;
+  background-size: cover;
+}
+
+.connection.linkedin .icon {
+  height: 18px;
+  width: 18px;
+  margin-top: 3px;
+  margin-left: 4px;
+  background-position: center;
+  background-size: cover;
+}
+
+.connection.email .icon {
+  background-image: url("https://cdn0.iconfinder.com/data/icons/picons-social/57/67-gmail-512.png");
+}
+
+.connection.linkedin .icon {
+  background-image: url("https://cdn3.iconfinder.com/data/icons/picons-social/57/11-linkedin-512.png");
+}
+
+@media screen and (min-width: 1500px) {
+
+  .card:hover .connection {
+    transform: translateY(-120px);
+  }
+  .card:hover .info {
+    transform: translateY(-20%);
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .card {
+    width: 25vw;
+    height: 25vw;
+  }
+  .card:hover .connection {
+    transform: translateY(-120px);
+  }
+  .card:hover .info {
+    transform: translateY(0%);
+  }
+  .info {
+    transform: translateY(300px);
+}
+}
+
+@media screen and (min-width: 2180px) {
+  .card {
+    width: 20vw;
+    height: 20vw;
+  }
+  .card:hover .connection {
+    transform: translateY(-120px);
+  }
+  .card:hover .info {
+    transform: translateY(20%);
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .card {
+    width: 50vh;
+    height: 50vh;
+  }
+
+  .card:hover .connection {
+    transform: translateY(-70px);
+  }
+  .info {
+    height: 35vh;
+  }
+  .card:hover .info {
+    transform: translateY(-105px);
+  }
+}
+
+
+@media screen and (max-width: 1500px) {
+  .card {
+    width: 25vw;
+    height: 25vw;
+  }
+  .card:hover .connection {
+    transform: translateY(-120px);
+  }
+  .card:hover .info {
+    transform: translateY(-20%);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .card {
+    width: 30vw;
+    height: 30vw;
+  }
+  .card:hover .connection {
+    transform: translateY(-100px) !important; 
+  }
+  .card:hover .info {
+    transform: translateY(-40px) !important ;
+  }
+  .team-background {
+    padding: 10px 15px;
+  }
+}
+
+
+@media screen and (max-width: 1380px) {
+  .card {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .card {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .card {
+    width: 25vw;
+    height: 25vw;
+  }
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 27vw;
+    height: 30vw;
+  }
+  .card:hover .connection {
+    transform: translateY(-115px) !important;
+  }
+  .card:hover .info {
+    transform: translateY(-19%) !important;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .card {
+    height: 100%;
+    width: 100%;
+    margin: 0px 10px;
+  }
+  .team-background {
+    font-size: 15px;
+  }
+  .info {
+    height: 40vh;
+  }
+  .card:hover .connection {
+    transform: translateY(-175px) !important;
+  }
+  .card:hover .info {
+    transform: translateY(-25%) !important;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .card {
+    height: 40vw;
+    width: 40vw;
+    margin: 0px 10px;
+  }
+  .team-background {
+    font-size: 15px;
+  }
+  .info {
+    height: 40vh;
+  }
+  .card:hover .connection {
+    transform: translateY(-105px) !important;
+  }
+  .card:hover .info {
+    transform: translateY(0%) !important;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .team-top-container {
+    font-size: 1.8rem;
+  }
+  .team-background {
+    font-size: 15px;
+  }
+  .team-member-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 790px) {
+  .card {
+    width: 40vh;
+    height: 40vh;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .card:hover .connection {
+    transform: translateY(-75px);
+  }
+  .info {
+    height: 40vh;
+  }
+  .team-background {
+    font-size: 13px;
+  }
+  .card:hover .info {
+    transform: translateY(-125px);
+  }
+}
+
+
+
+
+@media screen and (max-width: 470px) {
+  .card {
+    width: 40vh;
+    height: 40vh;
+  }
+  .team-member-name {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .team-member-designation {
+    font-size: 0.7rem;
+  }
+  .team-background {
+    font-size: 0.8rem;
+  }
+  .card:hover .connection {
+    transform: translateY(-65px);
+  }
+  .card:hover .info {
+    transform: translateY(10%);
+  }
+}
+
+@media screen and (max-width: 430px) {
+
+  .card:hover .connection {
+    transform: translateY(-65px);
+  }
+  .card:hover .info {
+    transform: translateY(10%);
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 420px) {
+
+  .card:hover .connection {
+    transform: translateY(-65px);
+  }
+  .card:hover .info {
+    transform: translateY(10%);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .card {
+    width: 40vh;
+    height: 40vh;
+  }
+  .card:hover .connection {
+    transform: translateY(-75px) !important;
+  }
+  .card:hover .info {
+    transform: translateY(-15%) !important ;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .card {
+    width: 30vh;
+    height: 30vh;
+  }
+  .card:hover .connection {
+    transform: translateY(-80px) !important;
+  }
+  .card:hover .info {
+    transform: translateY(-1%) !important;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .card {
+    width: 40vh;
+    height: 40vh;
+  }
+  .card:hover .connection {
+    transform: translateY(-80px) !important;
+  }
+  .card:hover .info {
+    transform: translateY(-10%) !important;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .card {
+    width: 30vh;
+    height: 30vh;
+  }
+  .card:hover .connection {
+    transform: translateY(-80px);
+  }
+  .card:hover .info {
+    transform: translateY(-45%);
+  }
+}
+

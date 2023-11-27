@@ -1,0 +1,112 @@
+#workCarousel {
+    flex: 5 !important;
+    height: 100%;
+    width: 100%;
+    overflow: hidden !important;
+    background-image: url("../../../images/solutions/sec02-block-03@3x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  .gradient-card {
+  }
+  .make_cover {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important;
+  }
+  
+  
+  .inner-work-carosuel {
+    height: 100%;
+    width: 100%;
+    /* background: rgba(219, 219, 219, 0.435); */
+    user-select: none;
+    /* display: flex;
+      flex-direction: column; */
+  }
+  
+  /* @keyframes scroll{
+      to{
+          transform:translateY(-50%)
+      }
+  } */
+  
+  .work-card-container {
+    /* animation:scroll 5s linear infinite; */
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* transform: translateY(-0%);
+      transition: transform 0.5s ease-in-out; */
+    /* margin: 20px 0px; */
+  }
+  .work-name-container {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .work-image-container {
+    height: 90%;
+    background: rgb(219, 219, 219);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #workCarousel {
+    flex: 3;
+    height: "100%";
+  }
+  
+  @media screen and (max-width: 900px) {
+    #workCarousel {
+      flex: none;
+      height: 60% !important;
+    }
+  }
+  
+  @media screen and (max-width: 850px) {
+    #workCarousel {
+      flex: none;
+      height: 70% !important;
+    }
+  }
+  /* @media screen and (max-width: 500px) {
+    #workCarousel {
+      flex: none;
+      height: 10vh !important;
+      background:transparent !important;
+    }
+    .carousel-inner{
+      height: fit-content !important;
+      overflow: hidden !important;
+      background: transparent !important;
+    }
+    .make_cover{
+      height: max-content !important;
+      object-fit: contain !important;
+      overflow: hidden !important;
+      border-radius: 30px;
+    }
+  } */
+  
+  @media screen and (max-width:400px) {
+    #workCarousel{
+      height: max-content !important;
+    flex: none !important;
+    display: none !important;
+    }
+    .make_cover{
+      width: 100% !important;
+      /* height: 60vh !important; */
+      border-radius: 30px;
+      object-fit: contain !important ;
+    }
+  }

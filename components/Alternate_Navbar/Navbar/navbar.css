@@ -1,0 +1,217 @@
+.Navbar {
+  background: #F4F4F4;
+  height: auto;
+  width: 100%;
+  position: sticky !important;
+  top: 0;
+  z-index: 999;
+}
+.Navbar-changeable{
+  display: none;
+  background: #F4F4F4;
+}
+.navbar-inside-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 80px;
+  position: relative;
+}
+
+.navbar-left-inner-component {
+  cursor: pointer;
+}
+
+.logo-component {
+  width: 240px;
+  height: 40px;
+}
+.twentytwoAMM-logo-navbar {
+  height: 100%;
+  width: 100%;
+}
+
+.hamburger-component {
+  cursor: pointer;
+  background: black;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.hamburger-dash {
+  height: 2px;
+  width: 20px;
+  background: rgb(255, 255, 255);
+  margin-bottom: 2px;
+}
+.dash-3 {
+  margin-bottom: 0px;
+}
+
+.navbar-element-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: 25px;
+  right: 80px;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.button-op {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+  top: 25px;
+  right: 80px;
+}
+
+.burger {
+  width: 100%;
+  background: #000000;
+}
+.burger::after,
+.burger::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 40%;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.burger::after {
+  top: -5px;
+}
+
+.burger::before {
+  top: 5px;
+}
+
+.burgerActive::after {
+  transform: rotate(45deg);
+  top: -1px;
+}
+
+.burgerActive::before {
+  transform: rotate(-45deg);
+  top: 0px;
+}
+
+@media screen and (min-width:1500px) {
+  .Navbar{
+    display: none;
+  }
+  .Navbar-changeable{
+    display: block;
+    height: auto;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+}
+@media screen and (min-width:2000px) {
+  .Navbar{
+    display: none;
+  }
+  .Navbar-changeable{
+    display: block;
+    height: auto;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .logo-component{
+    height: 60px;
+    width: 360px;
+  }
+  .button{
+    height: 60px;
+    width: 60px;
+  }
+  .button-op{
+    height: 60px;
+    width: 60px;
+  }
+}
+
+
+@media screen and (max-width: 850px) {
+  .navbar-inside-container {
+    padding: 30px 50px;
+  }
+  .navbar-element-right {
+    right: 50px;
+  }
+  .button-op {
+    right: inherit;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .navbar-inside-container {
+    padding: 30px 20px;
+  }
+  .navbar-element-right {
+    right: 20px;
+  }
+  .button-op {
+    right: inherit;
+  }
+
+}
+
+
+
+@media screen and (max-width: 320px) {
+  .button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .button-op {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .navbar-element-right {
+    top: 25px;
+  }
+  .button-op {
+    top: inherit;
+  }
+  .logo-component {
+    width: 162px;
+    height: 27px;
+  }
+}
